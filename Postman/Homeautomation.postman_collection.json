@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "0a495d65-c215-443d-b7be-d211ddc47c33",
+		"name": "Homeautomation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.alpdesk.de/auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"homeautomation\",\n    \"password\": \"1234567890\"\n}"
+				},
+				"url": {
+					"raw": "http://contao.local/auth",
+					"protocol": "http",
+					"host": [
+						"contao",
+						"local"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.alpdesk.de/plugin History",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IllXeHdaR1Z6YTE5b2IyMWxZWFYwYjIxaGRHbHZiZz09In0.eyJpc3MiOiJBbHBkZXNrIiwiYXVkIjoiaHR0cHM6XC9cL2FscGRlc2suZGUiLCJqdGkiOiJZV3h3WkdWemExOW9iMjFsWVhWMGIyMWhkR2x2Ymc9PSIsImlhdCI6MTYwMzc5MjgwOSwibmJmIjoxNjAzNzkyODA5LCJleHAiOjE2MDM3OTY0MDksInVzZXJuYW1lIjoiaG9tZWF1dG9tYXRpb24ifQ.Ya3_iEEDTYwkBoZ6JHkJ9r42A4zS-qI42oelMH7RlG0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"plugin\":\"automation\",\n    \"data\":{\n        \"method\":\"history\",\n        \"params\": \"\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://contao.local/plugin",
+					"protocol": "http",
+					"host": [
+						"contao",
+						"local"
+					],
+					"path": [
+						"plugin"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
