@@ -51,7 +51,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"plugin\":\"automation\",\n    \"data\":{\n        \"method\":\"history\",\n        \"params\": \"\"\n    }\n}",
+					"raw": "{\n    \"plugin\":\"automationhistory\",\n    \"data\":{\n        \"method\":\"\",\n        \"params\": \"\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
