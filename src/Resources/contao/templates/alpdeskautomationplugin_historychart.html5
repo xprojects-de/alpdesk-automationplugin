@@ -1,0 +1,24 @@
+<div class="alpdeskautomationplugin_historychart">
+
+  <span id="alpdeskautomationplugin_historychart_reload" class="reloadbutton">reload</span>
+  
+  <div class="alpdeskautomationplugin_historychart_content">  
+    <?php if (count($this->hData) > 0): ?>
+      <?php foreach ($this->hData as $plotID => $datas): ?>
+        <?php if (is_array($datas)): ?>
+          <?php
+          $x = array();
+          $y = array();
+          foreach ($datas as $data) {
+            array_push($x, $data['date']);
+            array_push($y, $data['value']);
+          }
+          ?>
+          <h3><?= $datas[0]['title'] ?> <br><small><?= $datas[0]['label'] ?></small> </h3>
+          <div class="automationhistorychart" data-x="<?= implode('||', $x) ?>" data-y="<?= implode('||', $y) ?>" id="plot<?= $plotID ?>" style="width:100%;height:325px;" >loading...</div>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+  
+</div>

@@ -1,0 +1,11 @@
+services:
+  
+  _defaults:
+    autoconfigure: true
+    autowire: true
+      
+  Alpdesk\AlpdeskAutomationPlugin\Controller\AlpdeskAutomationPluginCronController:
+      arguments:
+        - '@contao.framework'
+      tags: 
+        - 'controller.service_arguments' 

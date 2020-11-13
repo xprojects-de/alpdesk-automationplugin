@@ -1,0 +1,32 @@
+{
+  "name": "alpdesk/alpdesk-automationplugin",
+  "description": "Alpdesk-Automationplugin for Alpdesk",
+  "keywords": ["contao", "alpdesk"],
+  "type": "contao-bundle",
+  "version": "0.0.14",
+  "license": "LGPL-3.0-or-later",
+  "require": {
+    "php": ">=7.4",
+    "alpdesk/alpdesk-core": "^0.1"
+  },
+  "authors": [
+    {
+      "name": "Alpdesk",
+      "homepage": "https://alpdesk.de",
+      "email": "infos@alpdesk.de",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Alpdesk\\AlpdeskAutomationPlugin\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Alpdesk\\AlpdeskAutomationPlugin\\ContaoManager\\Plugin",
+    "contao-component-dir": "public"
+  },
+  "config": {
+    "contao-component-dir": "public"
+  }
+}

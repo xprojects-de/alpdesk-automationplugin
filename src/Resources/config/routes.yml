@@ -1,0 +1,8 @@
+
+alpdeskautomationplugin_cron:
+    path: /aap-cron
+    defaults:
+        _controller: Alpdesk\AlpdeskAutomationPlugin\Controller\AlpdeskAutomationPluginCronController:cron
+        _scope: frontend
+        _token_check: false
+    methods: [GET]  
