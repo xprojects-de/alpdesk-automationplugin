@@ -21,7 +21,7 @@
 					"raw": "{\n    \"username\": \"homeautomation\",\n    \"password\": \"1234567890\"\n}"
 				},
 				"url": {
-					"raw": "http://contao.local/auth",
+					"raw": "https://contao.local:8890/auth",
 					"protocol": "http",
 					"host": [
 						"contao",
@@ -59,7 +59,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://contao.local/plugin",
+					"raw": "https://contao.local:8890/plugin",
 					"protocol": "http",
 					"host": [
 						"contao",
