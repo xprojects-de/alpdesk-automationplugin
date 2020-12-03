@@ -3,7 +3,7 @@
   "description": "Alpdesk-Automationplugin for Alpdesk",
   "keywords": ["contao", "alpdesk"],
   "type": "contao-bundle",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "LGPL-3.0-or-later",
   "require": {
     "php": ">=7.4",

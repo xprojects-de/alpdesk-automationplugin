@@ -21,14 +21,21 @@
 					"raw": "{\n    \"username\": \"homeautomation\",\n    \"password\": \"1234567890\"\n}"
 				},
 				"url": {
-					"raw": "http://contao.local/auth",
+					"raw": "http://contao.local:8888/auth?XDEBUG_SESSION_START=netbeans-xdebug",
 					"protocol": "http",
 					"host": [
 						"contao",
 						"local"
 					],
+					"port": "8888",
 					"path": [
 						"auth"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "netbeans-xdebug"
+						}
 					]
 				}
 			},
@@ -42,7 +49,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IllXeHdaR1Z6YTE5b2IyMWxZWFYwYjIxaGRHbHZiZz09In0.eyJpc3MiOiJBbHBkZXNrIiwiYXVkIjoiaHR0cHM6XC9cL2FscGRlc2suZGUiLCJqdGkiOiJZV3h3WkdWemExOW9iMjFsWVhWMGIyMWhkR2x2Ymc9PSIsImlhdCI6MTYwMzc5MjgwOSwibmJmIjoxNjAzNzkyODA5LCJleHAiOjE2MDM3OTY0MDksInVzZXJuYW1lIjoiaG9tZWF1dG9tYXRpb24ifQ.Ya3_iEEDTYwkBoZ6JHkJ9r42A4zS-qI42oelMH7RlG0",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IllXeHdaR1Z6YTE5b2IyMWxZWFYwYjIxaGRHbHZiZz09In0.eyJpc3MiOiJBbHBkZXNrIiwiYXVkIjoiaHR0cHM6XC9cL2FscGRlc2suZGUiLCJqdGkiOiJZV3h3WkdWemExOW9iMjFsWVhWMGIyMWhkR2x2Ymc9PSIsImlhdCI6MTYwNTM3MjQyMiwibmJmIjoxNjA1MzcyNDIyLCJleHAiOjE2MDUzNzYwMjIsInVzZXJuYW1lIjoiaG9tZWF1dG9tYXRpb24ifQ.K1XQ39p1atlF42KJPy3kmRawFz4BUuaGAgM7byOGsAI",
 							"type": "string"
 						}
 					]
@@ -51,7 +58,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"plugin\":\"automation\",\n    \"data\":{\n        \"method\":\"history\",\n        \"params\": \"\"\n    }\n}",
+					"raw": "{\n    \"plugin\":\"automationhistory\",\n    \"data\":{\n        \"method\":\"history\",\n        \"params\": \"\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -59,14 +66,21 @@
 					}
 				},
 				"url": {
-					"raw": "http://contao.local/plugin",
+					"raw": "http://contao.local:8888/plugin?XDEBUG_SESSION_START=netbeans-xdebug",
 					"protocol": "http",
 					"host": [
 						"contao",
 						"local"
 					],
+					"port": "8888",
 					"path": [
 						"plugin"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "netbeans-xdebug"
+						}
 					]
 				}
 			},
