@@ -4,16 +4,14 @@ declare(strict_types=1);
 
 namespace Alpdesk\AlpdeskAutomationPlugin\Elements;
 
-use Alpdesk\AlpdeskCore\Elements\AlpdeskCoreElement;
-use Alpdesk\AlpdeskCore\Library\Mandant\AlpdescCoreBaseMandantInfo;
+use Alpdesk\AlpdeskCore\Events\Event\AlpdeskCorePlugincallEvent;
 use Alpdesk\AlpdeskAutomationPlugin\Model\AlpdeskautomationhistoryModel;
 use Contao\Environment;
 use Contao\FrontendTemplate;
 use Contao\StringUtil;
 
-class AlpdeskElementAutomationHistory extends AlpdeskCoreElement {
+class AlpdeskElementAutomationHistory {
 
-  protected bool $customTemplate = true;
   public static $TYPE_INPUT = 1000;
   public static $TYPE_OUTPUT = 2000;
   public static $TYPE_TEMPERATURE = 3000;
@@ -108,7 +106,15 @@ class AlpdeskElementAutomationHistory extends AlpdeskCoreElement {
     return $returnValue;
   }
 
-  public function execute(AlpdescCoreBaseMandantInfo $mandantInfo, array $data): array {
+  public function __invoke(AlpdeskCorePlugincallEvent $event): void {
+
+    if ('automationhistory' !== $event->getResultData()->getPlugin()) {
+      return;
+    }
+
+    $mandantInfo = $event->getResultData()->getMandantInfo();
+    $data = $event->getResultData()->getRequestData();
+
     $response = array(
         'ngContent' => 'error loading data',
         'ngStylesheetUrl' => array(
@@ -127,7 +133,8 @@ class AlpdeskElementAutomationHistory extends AlpdeskCoreElement {
         $response['ngContent'] = $ex->getMessage();
       }
     }
-    return $response;
+
+    $event->getResultData()->setData($response);
   }
 
 }
