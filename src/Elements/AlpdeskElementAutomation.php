@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Alpdesk\AlpdeskAutomationPlugin\Elements;
 
-use Alpdesk\AlpdeskCore\Elements\AlpdeskCoreElement;
-use Alpdesk\AlpdeskCore\Library\Mandant\AlpdescCoreBaseMandantInfo;
+use Alpdesk\AlpdeskCore\Events\Event\AlpdeskCorePlugincallEvent;
 use Alpdesk\AlpdeskAutomationPlugin\Model\AlpdeskautomationitemsModel;
 use Alpdesk\AlpdeskAutomationPlugin\Model\AlpdeskautomationchangesModel;
 
-class AlpdeskElementAutomation extends AlpdeskCoreElement {
+class AlpdeskElementAutomation {
 
   private function changeItem(int $mandantId, array $data, array $returnValue): array {
     if ($mandantId <= 0) {
@@ -92,7 +91,15 @@ class AlpdeskElementAutomation extends AlpdeskCoreElement {
     return $returnValue;
   }
 
-  public function execute(AlpdescCoreBaseMandantInfo $mandantInfo, array $data): array {
+  public function __invoke(AlpdeskCorePlugincallEvent $event): void {
+
+    if ('automation' !== $event->getResultData()->getPlugin()) {
+      return;
+    }
+
+    $mandantInfo = $event->getResultData()->getMandantInfo();
+    $data = $event->getResultData()->getRequestData();
+
     $response = array(
         'error' => true,
         'changes' => array()
@@ -116,7 +123,8 @@ class AlpdeskElementAutomation extends AlpdeskCoreElement {
         $response['error'] = true;
       }
     }
-    return $response;
+
+    $event->getResultData()->setData($response);
   }
 
 }
