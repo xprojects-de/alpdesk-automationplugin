@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c94e96e9-0e7a-45fd-aa6c-5a4edead59cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Elements/AlpdeskElementAutomation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Elements/AlpdeskElementAutomation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Elements/AlpdeskElementAutomationHistory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Elements/AlpdeskElementAutomationHistory.php" afterDir="false" />
+    <list default="true" id="c94e96e9-0e7a-45fd-aa6c-5a4edead59cd" name="Default Changelist" comment="Move to IntelliJ">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlpdeskAutomationPluginCronController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlpdeskAutomationPluginCronController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +39,36 @@
       <option name="presentableId" value="Default" />
       <updated>1619500377459</updated>
       <workItem from="1619500378893" duration="370000" />
-      <workItem from="1626669039682" duration="81000" />
+      <workItem from="1626669039682" duration="130000" />
+      <workItem from="1626870390806" duration="120000" />
     </task>
+    <task id="LOCAL-00001" summary="Move to IntelliJ">
+      <created>1626669156956</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626669156956</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Move to IntelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move to IntelliJ" />
   </component>
 </project>
