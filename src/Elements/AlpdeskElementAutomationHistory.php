@@ -12,7 +12,6 @@ use Contao\StringUtil;
 
 class AlpdeskElementAutomationHistory
 {
-
     public static $TYPE_INPUT = 1000;
     public static $TYPE_OUTPUT = 2000;
     public static $TYPE_TEMPERATURE = 3000;
@@ -26,6 +25,11 @@ class AlpdeskElementAutomationHistory
     public static $TYPE_SHADING = 11000;
     public static $TYPE_ANALOGIN = 12000;
 
+    /**
+     * @param int $mandantId
+     * @return string
+     * @throws \Exception
+     */
     private function history(int $mandantId): string
     {
         $returnValue = '';

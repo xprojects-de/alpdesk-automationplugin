@@ -9,15 +9,15 @@ $GLOBALS['TL_MODELS']['tl_alpdeskautomationchanges'] = AlpdeskautomationchangesM
 $GLOBALS['TL_MODELS']['tl_alpdeskautomationhistory'] = AlpdeskautomationhistoryModel::class;
 
 $GLOBALS['BE_MOD']['alpdeskautomation']['alpdeskautomationitems'] = array
-    (
+(
     'tables' => array('tl_alpdeskautomationitems')
 );
 $GLOBALS['BE_MOD']['alpdeskautomation']['alpdeskautomationchanges'] = array
-    (
+(
     'tables' => array('tl_alpdeskautomationchanges')
 );
 $GLOBALS['BE_MOD']['alpdeskautomation']['alpdeskautomationhistory'] = array
-    (
+(
     'tables' => array('tl_alpdeskautomationhistory')
 );
 

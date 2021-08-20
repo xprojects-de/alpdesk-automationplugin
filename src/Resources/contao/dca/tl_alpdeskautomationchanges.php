@@ -5,9 +5,9 @@ $GLOBALS['TL_DCA']['tl_alpdeskautomationchanges'] = array(
         'dataContainer' => 'Table',
         'enableVersioning' => true,
         'sql' => array
-            (
+        (
             'keys' => array
-                (
+            (
                 'id' => 'primary'
             )
         )
@@ -54,21 +54,21 @@ $GLOBALS['TL_DCA']['tl_alpdeskautomationchanges'] = array(
         '' => ''
     ),
     'fields' => array
-        (
+    (
         'id' => array
-            (
+        (
             'sql' => "int(10) unsigned NOT NULL auto_increment"
         ),
         'pid' => array
-            (
+        (
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
         'tstamp' => array
-            (
+        (
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
         'mandant' => array
-            (
+        (
             'label' => &$GLOBALS['TL_LANG']['tl_alpdeskautomationchanges']['mandant'],
             'exclude' => true,
             'search' => true,
@@ -78,7 +78,7 @@ $GLOBALS['TL_DCA']['tl_alpdeskautomationchanges'] = array(
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
         'devicehandle' => array
-            (
+        (
             'label' => &$GLOBALS['TL_LANG']['tl_alpdeskautomationchanges']['devicehandle'],
             'exclude' => true,
             'search' => true,
@@ -87,7 +87,7 @@ $GLOBALS['TL_DCA']['tl_alpdeskautomationchanges'] = array(
             'sql' => "varchar(255) NOT NULL default ''"
         ),
         'devicevalue' => array
-            (
+        (
             'label' => &$GLOBALS['TL_LANG']['tl_alpdeskautomationchanges']['devicevalue'],
             'exclude' => true,
             'search' => true,

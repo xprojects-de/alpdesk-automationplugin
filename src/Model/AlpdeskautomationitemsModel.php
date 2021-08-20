@@ -6,8 +6,7 @@ namespace Alpdesk\AlpdeskAutomationPlugin\Model;
 
 use Contao\Model;
 
-class AlpdeskautomationitemsModel extends Model {
-
-  protected static $strTable = 'tl_alpdeskautomationitems';
-
+class AlpdeskautomationitemsModel extends Model
+{
+    protected static $strTable = 'tl_alpdeskautomationitems';
 }

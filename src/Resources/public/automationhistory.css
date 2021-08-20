@@ -1,10 +1,10 @@
 
 .alpdeskautomationplugin_historychart_content {
-  border-top: 1px solid #f0f0f0;
-  margin-top: 20px;
-  padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 20px;
+    padding-top: 20px;
 }
 
 #alpdeskautomationplugin_historychart_reload {
-  cursor: pointer;
+    cursor: pointer;
 }

@@ -10,7 +10,13 @@ use Alpdesk\AlpdeskAutomationPlugin\Model\AlpdeskautomationchangesModel;
 
 class AlpdeskElementAutomation
 {
-
+    /**
+     * @param int $mandantId
+     * @param array $data
+     * @param array $returnValue
+     * @return array
+     * @throws \Exception
+     */
     private function changeItem(int $mandantId, array $data, array $returnValue): array
     {
         if ($mandantId <= 0) {
@@ -31,6 +37,12 @@ class AlpdeskElementAutomation
         return $returnValue;
     }
 
+    /**
+     * @param int $mandantId
+     * @param array $returnValue
+     * @return array
+     * @throws \Exception
+     */
     private function listItems(int $mandantId, array $returnValue): array
     {
         if ($mandantId <= 0) {
@@ -66,6 +78,13 @@ class AlpdeskElementAutomation
         return $returnValue;
     }
 
+    /**
+     * @param int $mandantId
+     * @param array $data
+     * @param array $returnValue
+     * @return array
+     * @throws \Exception
+     */
     private function commitChanges(int $mandantId, array $data, array $returnValue): array
     {
         if ($mandantId <= 0) {

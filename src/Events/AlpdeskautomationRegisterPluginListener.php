@@ -6,25 +6,25 @@ namespace Alpdesk\AlpdeskAutomationPlugin\Events;
 
 use Alpdesk\AlpdeskCore\Events\Event\AlpdeskCoreRegisterPlugin;
 
-class AlpdeskautomationRegisterPluginListener {
+class AlpdeskautomationRegisterPluginListener
+{
+    public function __invoke(AlpdeskCoreRegisterPlugin $event): void
+    {
+        $data = $event->getPluginData();
+        $info = $event->getPluginInfo();
 
-  public function __invoke(AlpdeskCoreRegisterPlugin $event): void {
+        $data['automation'] = $GLOBALS['TL_LANG']['ADME']['automationplugin'];
+        $info['automation'] = [
+            'customTemplate' => false
+        ];
 
-    $data = $event->getPluginData();
-    $info = $event->getPluginInfo();
+        $data['automationhistory'] = $GLOBALS['TL_LANG']['ADME']['automationhistoryplugin'];
+        $info['automationhistory'] = [
+            'customTemplate' => true
+        ];
 
-    $data['automation'] = $GLOBALS['TL_LANG']['ADME']['automationplugin'];
-    $info['automation'] = [
-        'customTemplate' => false
-    ];
-
-    $data['automationhistory'] = $GLOBALS['TL_LANG']['ADME']['automationhistoryplugin'];
-    $info['automationhistory'] = [
-        'customTemplate' => true
-    ];
-
-    $event->setPluginData($data);
-    $event->setPluginInfo($info);
-  }
+        $event->setPluginData($data);
+        $event->setPluginInfo($info);
+    }
 
 }
