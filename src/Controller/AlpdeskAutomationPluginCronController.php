@@ -15,7 +15,6 @@ use Alpdesk\AlpdeskAutomationPlugin\Elements\AlpdeskElementAutomationHistory;
 
 class AlpdeskAutomationPluginCronController extends AbstractController
 {
-
     protected ContaoFramework $framework;
 
     public function __construct(ContaoFramework $framework)
@@ -100,12 +99,14 @@ class AlpdeskAutomationPluginCronController extends AbstractController
                 }
 
                 if (count($data) > 0) {
-                    foreach ($data as $mandant => $data) {
+                    foreach ($data as $mandant => $dataItem) {
+
                         $historyItem = new AlpdeskautomationhistoryModel();
                         $historyItem->tstamp = time();
                         $historyItem->mandant = $mandant;
-                        $historyItem->data = json_encode($data);
+                        $historyItem->data = json_encode($dataItem);
                         $historyItem->save();
+
                     }
                 }
 

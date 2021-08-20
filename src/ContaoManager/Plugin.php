@@ -8,28 +8,35 @@ use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
-use Contao\ManagerPlugin\Bundle\Config\ConfigInterface;
 use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Alpdesk\AlpdeskCore\AlpdeskCoreBundle;
 use Alpdesk\AlpdeskAutomationPlugin\AlpdeskAutomationPluginBundle;
 
-class Plugin implements BundlePluginInterface, RoutingPluginInterface {
-
-  public function getBundles(ParserInterface $parser) {
-    return [
-                BundleConfig::create(AlpdeskAutomationPluginBundle::class)
+class Plugin implements BundlePluginInterface, RoutingPluginInterface
+{
+    public function getBundles(ParserInterface $parser): array
+    {
+        return [
+            BundleConfig::create(AlpdeskAutomationPluginBundle::class)
                 ->setLoadAfter([
                     ContaoCoreBundle::class,
                     AlpdeskCoreBundle::class
                 ]),
-    ];
-  }
+        ];
+    }
 
-  public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel) {
-    $file = __DIR__ . '/../Resources/config/routes.yml';
-    return $resolver->resolve($file)->load($file);
-  }
+    /**
+     * @param LoaderResolverInterface $resolver
+     * @param KernelInterface $kernel
+     * @return mixed
+     * @throws \Exception
+     */
+    public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel)
+    {
+        $file = __DIR__ . '/../Resources/config/routes.yml';
+        return $resolver->resolve($file)->load($file);
+    }
 
 }

@@ -1,16 +1,16 @@
 services:
-  
+
   alpdeskautomation.listener.registerplugin:
     class: Alpdesk\AlpdeskAutomationPlugin\Events\AlpdeskautomationRegisterPluginListener
     tags:
-      - { name: kernel.event_listener, event: alpdesk.registerplugin}
-      
+      - { name: kernel.event_listener, event: alpdesk.registerplugin }
+
   alpdeskautomation.listener.automation:
     class: Alpdesk\AlpdeskAutomationPlugin\Elements\AlpdeskElementAutomation
     tags:
-      - { name: kernel.event_listener, event: alpdesk.plugincall}  
-      
+      - { name: kernel.event_listener, event: alpdesk.plugincall }
+
   alpdeskautomation.listener.history:
     class: Alpdesk\AlpdeskAutomationPlugin\Elements\AlpdeskElementAutomationHistory
     tags:
-      - { name: kernel.event_listener, event: alpdesk.plugincall}    
+      - { name: kernel.event_listener, event: alpdesk.plugincall }
