@@ -34,8 +34,10 @@
     "contao-component-dir": "public"
   },
   "require-dev": {
+    "roave/security-advisories": "dev-latest",
     "phpstan/phpstan": "^0.12.81",
-    "contao/manager-bundle": "^4.11",
+    "contao/manager-bundle": "^4.12",
+    "contao/manager-plugin": "^2.0",
     "vimeo/psalm": "^4.6",
     "phpunit/phpunit": "^9.5",
     "symfony/phpunit-bridge": "^5.2"
