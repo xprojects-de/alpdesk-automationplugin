@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c94e96e9-0e7a-45fd-aa6c-5a4edead59cd" name="Default Changelist" comment="codeCleanup">
-      <change afterPath="$PROJECT_DIR$/phpstan.neon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/alpdesk-automationplugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alpdesk-automationplugin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="c94e96e9-0e7a-45fd-aa6c-5a4edead59cd" name="Default Changelist" comment="update for Contao 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psaml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationchanges.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationchanges.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationhistory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationhistory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationitems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationitems.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,6 +261,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "settings.php.quality.tools"
   }
 }]]></component>
@@ -302,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1629438788519</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update for Contao 5">
+      <option name="closed" value="true" />
+      <created>1689231803129</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689231803129</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +341,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Move to IntelliJ" />
     <MESSAGE value="codeCleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="codeCleanup" />
+    <MESSAGE value="update for Contao 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="update for Contao 5" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
