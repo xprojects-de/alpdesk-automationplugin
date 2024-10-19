@@ -1,8 +1,11 @@
 <?php
 
+use Contao\DataContainer;
+use Contao\DC_Table;
+
 $GLOBALS['TL_DCA']['tl_alpdeskautomationchanges'] = array(
     'config' => array(
-        'dataContainer' => 'Table',
+        'dataContainer' => DC_Table::class,
         'enableVersioning' => true,
         'sql' => array
         (
@@ -14,9 +17,9 @@ $GLOBALS['TL_DCA']['tl_alpdeskautomationchanges'] = array(
     ),
     'list' => array(
         'sorting' => array(
-            'mode' => 1,
+            'mode' => DataContainer::MODE_SORTED,
             'fields' => array('mandant'),
-            'flag' => 1,
+            'flag' => DataContainer::SORT_INITIAL_LETTER_ASC,
             'panelLayout' => 'limit',
         ),
         'label' => array(
@@ -42,7 +45,7 @@ $GLOBALS['TL_DCA']['tl_alpdeskautomationchanges'] = array(
                 'label' => &$GLOBALS['TL_LANG']['tl_alpdeskautomationchanges']['delete'],
                 'href' => 'act=delete',
                 'icon' => 'delete.gif',
-                'attributes' => 'onclick="if (!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\')) return false; Backend.getScrollOffset();"'
+                'attributes' => 'onclick="if (!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\')) return false; Backend.getScrollOffset();"'
             )
         )
     ),

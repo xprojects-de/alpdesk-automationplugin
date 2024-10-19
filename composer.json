@@ -6,12 +6,12 @@
     "alpdesk"
   ],
   "type": "contao-bundle",
-  "version": "0.1.4",
+  "version": "1.0.2",
   "license": "LGPL-3.0-or-later",
   "require": {
-    "php": ">=7.4",
+    "php": "^8.1",
     "ext-json": "*",
-    "alpdesk/alpdesk-core": "^2.0.0"
+    "alpdesk/alpdesk-core": "^2.0 || ^3.0"
   },
   "authors": [
     {
@@ -31,13 +31,18 @@
     "contao-component-dir": "public"
   },
   "config": {
-    "contao-component-dir": "public"
+    "contao-component-dir": "public",
+    "allow-plugins": true
   },
   "require-dev": {
-    "phpstan/phpstan": "^0.12.81",
-    "contao/manager-bundle": "^4.11",
-    "vimeo/psalm": "^4.6",
+    "phpstan/phpstan": "^1.0",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "phpstan/phpstan-symfony": "^1.0",
+    "slam/phpstan-extensions": "^6.0",
+    "contao/manager-bundle": "^4.13 || ^5.0",
+    "contao/manager-plugin": "^2.0",
     "phpunit/phpunit": "^9.5",
-    "symfony/phpunit-bridge": "^5.2"
+    "symfony/phpunit-bridge": "^5.4 || ^6.0",
+    "rector/rector": "^0.13.10"
   }
 }

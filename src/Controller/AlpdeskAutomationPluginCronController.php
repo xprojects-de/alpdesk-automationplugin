@@ -22,7 +22,7 @@ class AlpdeskAutomationPluginCronController extends AbstractController
         $this->framework = $framework;
     }
 
-    private function deleteOldItems($mandant, $limitDays)
+    private function deleteOldItems($mandant, $limitDays): void
     {
         if ($limitDays <= 0) {
             $limitDays = 14;

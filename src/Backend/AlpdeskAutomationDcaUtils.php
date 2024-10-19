@@ -11,10 +11,10 @@ class AlpdeskAutomationDcaUtils extends Backend
 {
     public function showLabelItems($row, $label, $dc, $args): array
     {
-        $args[0] = date('Y-m-d H:i:s', intval($args[0]));
+        $args[0] = date('Y-m-d H:i:s', (int)$args[0]);
 
         try {
-            $mandant = AlpdeskcoreMandantModel::findById(intval($args[1]));
+            $mandant = AlpdeskcoreMandantModel::findById((int)$args[1]);
             if ($mandant !== null) {
                 $args[1] = $mandant->mandant;
             }
@@ -29,7 +29,7 @@ class AlpdeskAutomationDcaUtils extends Backend
     {
         try {
 
-            $mandant = AlpdeskcoreMandantModel::findById(intval($args[0]));
+            $mandant = AlpdeskcoreMandantModel::findById((int)$args[0]);
             if ($mandant !== null) {
                 $args[0] = $mandant->mandant;
             }
