@@ -1,5 +1,6 @@
 <?php
 
+use Alpdesk\AlpdeskAutomationPlugin\Backend\AlpdeskAutomationDcaUtils;
 use Contao\DataContainer;
 use Contao\DC_Table;
 
@@ -25,7 +26,7 @@ $GLOBALS['TL_DCA']['tl_alpdeskautomationchanges'] = array(
         'label' => array(
             'fields' => array('mandant', 'devicehandle'),
             'showColumns' => true,
-            'label_callback' => array('Alpdesk\\AlpdeskAutomationPlugin\\Backend\\AlpdeskAutomationDcaUtils', 'showLabelChanges')
+            'label_callback' => array(AlpdeskAutomationDcaUtils::class, 'showLabelChanges')
         ),
         'global_operations' => array(
             'all' => array(

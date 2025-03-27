@@ -5,14 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c94e96e9-0e7a-45fd-aa6c-5a4edead59cd" name="Default Changelist" comment="update for Contao 5">
+      <change beforePath="$PROJECT_DIR$/.idea/alpdesk-automationplugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alpdesk-automationplugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContaoManager/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaoManager/Plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlpdeskAutomationPluginCronController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlpdeskAutomationPluginCronController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Elements/AlpdeskElementAutomation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Elements/AlpdeskElementAutomation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Elements/AlpdeskElementAutomationHistory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Elements/AlpdeskElementAutomationHistory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationchanges.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationchanges.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationitems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskautomationitems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskcore_mandant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_alpdeskcore_mandant.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/public/chosen/composer.json" />
+      <option value="$PROJECT_DIR$/public/colorpicker/composer.json" />
+      <option value="$PROJECT_DIR$/public/tinymce4/composer.json" />
+      <option value="$PROJECT_DIR$/public/jquery/composer.json" />
+      <option value="$PROJECT_DIR$/public/simplemodal/composer.json" />
+      <option value="$PROJECT_DIR$/public/colorbox/composer.json" />
+      <option value="$PROJECT_DIR$/public/tablesort/composer.json" />
+      <option value="$PROJECT_DIR$/public/tristen-tablesort/composer.json" />
+      <option value="$PROJECT_DIR$/public/mediabox/composer.json" />
+      <option value="$PROJECT_DIR$/public/datepicker/composer.json" />
+      <option value="$PROJECT_DIR$/public/contao/composer.json" />
+      <option value="$PROJECT_DIR$/public/tablesorter/composer.json" />
+      <option value="$PROJECT_DIR$/public/mootools/composer.json" />
+      <option value="$PROJECT_DIR$/public/swipe/composer.json" />
+      <option value="$PROJECT_DIR$/public/ace/composer.json" />
+      <option value="$PROJECT_DIR$/public/dropzone/composer.json" />
+      <option value="$PROJECT_DIR$/public/jquery-ui/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" notifyAboutMissingVendor="false" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -27,10 +60,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "xprojects-de"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/xprojects-de/alpdesk-automationplugin.git",
+    "accountId": "510696ff-3a05-4fdc-8044-19e77fef6ba9"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony-cmf/routing" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
@@ -97,9 +142,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
       <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
@@ -129,7 +172,6 @@
       <path value="$PROJECT_DIR$/vendor/php-http/promise" />
       <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
       <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
-      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/http-cache" />
       <path value="$PROJECT_DIR$/vendor/php-http/message" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/http-cache-bundle" />
@@ -224,7 +266,6 @@
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/contao/maintenance-bundle-deprecated" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem-local" />
       <path value="$PROJECT_DIR$/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/vendor/symfony/rate-limiter" />
@@ -242,8 +283,42 @@
       <path value="$PROJECT_DIR$/vendor/league/uri" />
       <path value="$PROJECT_DIR$/vendor/debril/feed-io" />
       <path value="$PROJECT_DIR$/vendor/rector/rector" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/nitotm/efficient-language-detector" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/mjaschen/phpgeo" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/loupe/loupe" />
+      <path value="$PROJECT_DIR$/vendor/wamania/php-stemmer" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-utf8" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/spomky-labs/pki-framework" />
+      <path value="$PROJECT_DIR$/vendor/spomky-labs/cbor-php" />
+      <path value="$PROJECT_DIR$/vendor/enshrined/svg-sanitize" />
+      <path value="$PROJECT_DIR$/vendor/web-auth/cose-lib" />
+      <path value="$PROJECT_DIR$/vendor/web-auth/webauthn-stimulus" />
+      <path value="$PROJECT_DIR$/vendor/web-auth/webauthn-symfony-bundle" />
+      <path value="$PROJECT_DIR$/vendor/web-auth/webauthn-lib" />
+      <path value="$PROJECT_DIR$/vendor/cmsig/seal-loupe-adapter" />
+      <path value="$PROJECT_DIR$/vendor/cmsig/seal-symfony-bundle" />
+      <path value="$PROJECT_DIR$/vendor/cmsig/seal" />
+      <path value="$PROJECT_DIR$/vendor/toflar/state-set-index" />
+      <path value="$PROJECT_DIR$/vendor/toflar/cronjob-supervisor" />
+      <path value="$PROJECT_DIR$/vendor/scssphp/source-span" />
+      <path value="$PROJECT_DIR$/vendor/symfony/type-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php84" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
     </include_path>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="1rjrX8luqaTEVvpq5i3VX82rNcs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -251,20 +326,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "development",
     "last_opened_file_path": "/Users/benjaminhummel/Documents/Github/alpdesk-automationplugin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.php.quality.tools"
+    "settings.editor.selected.configurable": "web.server",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13" />
+        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -282,6 +370,11 @@
       <workItem from="1633058936233" duration="122000" />
       <workItem from="1642500747142" duration="741000" />
       <workItem from="1645276399464" duration="481000" />
+      <workItem from="1689236680148" duration="633000" />
+      <workItem from="1689240598426" duration="598000" />
+      <workItem from="1689260419605" duration="318000" />
+      <workItem from="1689311739600" duration="598000" />
+      <workItem from="1743052398955" duration="845000" />
     </task>
     <task id="LOCAL-00001" summary="Move to IntelliJ">
       <created>1626669156956</created>
@@ -321,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689232511211</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update for Contao 5">
+      <option name="closed" value="true" />
+      <created>1689234507064</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689234507064</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

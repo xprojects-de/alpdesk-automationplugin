@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['TL_DCA']['tl_alpdeskcore_mandant']['palettes']['default'] = $GLOBALS['TL_DCA']['tl_alpdeskcore_mandant']['palettes']['default'] . ';automationhistorycroninterval,automationhistorylimit';
+$GLOBALS['TL_DCA']['tl_alpdeskcore_mandant']['palettes']['default'] .= ';automationhistorycroninterval,automationhistorylimit';
 $GLOBALS['TL_DCA']['tl_alpdeskcore_mandant']['fields']['automationhistorycroninterval'] = array
 (
     'label' => &$GLOBALS['TL_LANG']['tl_alpdeskcore_mandant']['automationhistorycroninterval'],

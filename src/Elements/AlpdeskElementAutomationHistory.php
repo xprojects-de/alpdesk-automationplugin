@@ -46,55 +46,55 @@ class AlpdeskElementAutomationHistory
 
             foreach ($dbItems as $dbItem) {
 
-                $data = json_decode($dbItem->data, true);
+                $data = json_decode($dbItem->data, true, 512, JSON_THROW_ON_ERROR);
                 if (count($data) > 0) {
 
                     foreach ($data as $item) {
                         if (isset($item['devicevalue']['type'])) {
 
-                            $type = intval($item['devicevalue']['type']);
-                            $handle = intval($item['devicehandle']);
-                            $tstamp = intval($item['tstamp']);
+                            $type = (int)$item['devicevalue']['type'];
+                            $handle = (int)$item['devicehandle'];
+                            $tstamp = (int)$item['tstamp'];
                             $date = $item['date'];
 
-                            if ($type == self::$TYPE_SENSOR) {
+                            if ($type === self::$TYPE_SENSOR) {
                                 if (!array_key_exists($handle, $hData)) {
                                     $hData[$handle] = array();
                                 }
-                                $value = floatval(intval($item['devicevalue']['properties'][0]['value']) / 10.0);
-                                array_push($hData[$handle], array(
+                                $value = (int)$item['devicevalue']['properties'][0]['value'] / 10.0;
+                                $hData[$handle][] = array(
                                     'tstamp' => $tstamp,
                                     'date' => StringUtil::convertEncoding(date('Y-m-d H:i:s', $tstamp), 'UTF-8'),
                                     'title' => StringUtil::convertEncoding($item['devicevalue']['categorie'] . ' / ' . $item['devicevalue']['name'], 'UTF-8'),
                                     'label' => StringUtil::convertEncoding($item['devicevalue']['properties'][0]['displayName'], 'UTF-8'),
                                     'value' => StringUtil::convertEncoding($value, 'UTF-8')
-                                ));
-                            } else if ($type == self::$TYPE_TEMPERATURE) {
+                                );
+                            } else if ($type === self::$TYPE_TEMPERATURE) {
 
                                 if (!array_key_exists($handle, $hData)) {
                                     $hData[$handle] = array();
                                 }
-                                $value = floatval(intval($item['devicevalue']['properties'][1]['value']) / 10.0);
-                                array_push($hData[$handle], array(
+                                $value = (int)$item['devicevalue']['properties'][1]['value'] / 10.0;
+                                $hData[$handle][] = array(
                                     'tstamp' => $tstamp,
                                     'date' => StringUtil::convertEncoding(date('Y-m-d H:i:s', $tstamp), 'UTF-8'),
                                     'title' => StringUtil::convertEncoding($item['devicevalue']['categorie'] . ' / ' . $item['devicevalue']['name'], 'UTF-8'),
                                     'label' => StringUtil::convertEncoding($item['devicevalue']['properties'][1]['displayName'], 'UTF-8'),
                                     'value' => StringUtil::convertEncoding($value, 'UTF-8')
-                                ));
-                            } else if ($type == self::$TYPE_ANALOGIN) {
+                                );
+                            } else if ($type === self::$TYPE_ANALOGIN) {
 
                                 if (!array_key_exists($handle, $hData)) {
                                     $hData[$handle] = array();
                                 }
-                                $value = floatval($item['devicevalue']['properties'][1]['value']);
-                                array_push($hData[$handle], array(
+                                $value = (float)$item['devicevalue']['properties'][1]['value'];
+                                $hData[$handle][] = array(
                                     'tstamp' => $tstamp,
                                     'date' => StringUtil::convertEncoding(date('Y-m-d H:i:s', $tstamp), 'UTF-8'),
                                     'title' => StringUtil::convertEncoding($item['devicevalue']['categorie'] . ' / ' . $item['devicevalue']['name'], 'UTF-8'),
                                     'label' => StringUtil::convertEncoding($item['devicevalue']['properties'][0]['value'], 'UTF-8'),
                                     'value' => StringUtil::convertEncoding($value, 'UTF-8')
-                                ));
+                                );
                             }
                         }
                     }
@@ -132,6 +132,7 @@ class AlpdeskElementAutomationHistory
                 2 => Environment::get('base') . 'bundles/alpdeskautomationplugin/automationhistory.js',
             )
         );
+
         if (\is_array($data)) {
             try {
                 $response['ngContent'] = $this->history($mandantInfo->getId());

@@ -33,7 +33,7 @@ class Plugin implements BundlePluginInterface, RoutingPluginInterface
      * @return mixed
      * @throws \Exception
      */
-    public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel)
+    public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel): mixed
     {
         $file = __DIR__ . '/../Resources/config/routes.yml';
         return $resolver->resolve($file)->load($file);

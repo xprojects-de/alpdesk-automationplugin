@@ -65,7 +65,7 @@ class AlpdeskAutomationPluginCronController extends AbstractController
                             $mandantHistoryItems = AlpdeskautomationhistoryModel::findBy(array('mandant=?'), array($mandantInfo->id), array('order' => 'tstamp DESC', 'limit' => 1));
                             if ($mandantHistoryItems !== null) {
                                 $secureOffsetSecondsForScriptDuration = 20;
-                                if (($mandantHistoryItems->tstamp + (60 * intval($mandantInfo->automationhistorycroninterval)) - $secureOffsetSecondsForScriptDuration) > time()) {
+                                if (($mandantHistoryItems->tstamp + (60 * (int)$mandantInfo->automationhistorycroninterval) - $secureOffsetSecondsForScriptDuration) > time()) {
                                     $mandantCronIntervals[$dbItem->mandant] = false;
                                 }
                             }
@@ -78,21 +78,25 @@ class AlpdeskAutomationPluginCronController extends AbstractController
                             $data[$dbItem->mandant] = array();
                         }
 
-                        $deviceValue = json_decode($dbItem->devicevalue, true);
+                        $deviceValue = json_decode($dbItem->devicevalue, true, 512, JSON_THROW_ON_ERROR);
 
                         if (isset($deviceValue['type'])) {
 
-                            $type = intval($deviceValue['type']);
+                            $type = (int)$deviceValue['type'];
 
-                            if ($type == AlpdeskElementAutomationHistory::$TYPE_SENSOR || $type == AlpdeskElementAutomationHistory::$TYPE_TEMPERATURE || $type == AlpdeskElementAutomationHistory::$TYPE_ANALOGIN) {
+                            if (
+                                $type === AlpdeskElementAutomationHistory::$TYPE_SENSOR ||
+                                $type === AlpdeskElementAutomationHistory::$TYPE_TEMPERATURE ||
+                                $type === AlpdeskElementAutomationHistory::$TYPE_ANALOGIN
+                            ) {
 
-                                $date = date('d.m.Y H:i', intval($dbItem->tstamp));
-                                array_push($data[$dbItem->mandant], array(
+                                $date = date('d.m.Y H:i', (int)$dbItem->tstamp);
+                                $data[$dbItem->mandant][] = array(
                                     'tstamp' => $dbItem->tstamp,
                                     'date' => $date,
                                     'devicehandle' => $dbItem->devicehandle,
                                     'devicevalue' => $deviceValue
-                                ));
+                                );
                             }
                         }
                     }
@@ -104,7 +108,7 @@ class AlpdeskAutomationPluginCronController extends AbstractController
                         $historyItem = new AlpdeskautomationhistoryModel();
                         $historyItem->tstamp = time();
                         $historyItem->mandant = $mandant;
-                        $historyItem->data = json_encode($dataItem);
+                        $historyItem->data = json_encode($dataItem, JSON_THROW_ON_ERROR);
                         $historyItem->save();
 
                     }
@@ -113,8 +117,10 @@ class AlpdeskAutomationPluginCronController extends AbstractController
                 $returnvalue['error'] = false;
             }
         } catch (\Exception $ex) {
+
             $returnvalue['error'] = true;
             $returnvalue['msg'] = $ex->getMessage();
+
         }
 
         return $this->json($returnvalue);
